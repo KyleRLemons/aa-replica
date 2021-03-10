@@ -14,7 +14,7 @@ public class End : MonoBehaviour
     void Start()
     {
         
-        scoretext.text = "Your score: " + score;
+        scoretext.text = Score.PlayerName + "'s score: " + score;
 
     }
 

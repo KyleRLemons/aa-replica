@@ -13,16 +13,23 @@ public class Score : MonoBehaviour
     public static float startingTime = 10f;
     public TextMeshProUGUI countdownText;
     public TextMeshProUGUI text;
+    public TextMeshProUGUI NameofPlayer;
+    public static string PlayerName = "Pin";
+    public TextMeshProUGUI lives;
+
+
+    
     void Start()
     {
         currentTime = startingTime;
         PintCount = 0;
+        NameofPlayer.text = PlayerName;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        lives.text = "Lives: " + pin.lives.ToString();
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("00");
         text.text = PintCount.ToString();
